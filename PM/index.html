@@ -441,7 +441,7 @@
           */
           recordLocalsInterval=setInterval(recordLocals,600);
 	  backgroundMovementInterval=setInterval(function(){
-		var speed=1/1500;
+		var speed=1/1000;
 		var height=(Math.cos(Date.now()*speed)+1)/2,style=d.querySelector(".titleBackground").style;
 		style.backgroundPositionY=height*100+"%";
 		style["opacity"]=(height+9)/10;
