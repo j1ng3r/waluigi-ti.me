@@ -20,7 +20,6 @@
             100%{opacity: 1;background-position: 0px -110px}
         }
         .titleBackground {
-            animation: glow 6s infinite;
             color:white;
             text-align:center;
             font-size:40px;
@@ -441,6 +440,11 @@
           isSelected. It also retrieves the item from the localStorage.
           */
           recordLocalsInterval=setInterval(recordLocals,600);
+	  backgroundMovementInterval=setInterval(function(){
+		var height=Math.cos(Date.now()/700),style=d.querySelector(".titleBackground").style;
+		style["background-position"]=`0px ${(height+1)*55}`;
+		style["opacity"]=(height+9)/10;
+	  },15);
       </script>
   </body>
 </html>
