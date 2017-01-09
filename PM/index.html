@@ -441,9 +441,10 @@
           */
           recordLocalsInterval=setInterval(recordLocals,600);
 	  backgroundMovementInterval=setInterval(function(){
-		var height=Math.cos(Date.now()/700),style=d.querySelector(".titleBackground").style;
-		style.backgroundPosition=`0px ${(height+1)*55}`;
-		style["opacity"]=(height+19)/20;
+		var speed=1/1500;
+		var height=(Math.cos(Date.now()*speed)+1)/2,style=d.querySelector(".titleBackground").style;
+		style.backgroundPositionY=height*100+"%";
+		style["opacity"]=(height+9)/10;
 	  },15);
       </script>
   </body>
