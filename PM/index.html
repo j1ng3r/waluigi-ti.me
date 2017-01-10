@@ -274,7 +274,6 @@
               },
               scrub/*Keven*/(){
                   isSelected.k^=1;
-                  setValue('k',getCoreMinValue()-2);
                   var keven=d.getElementById('keven');
                   keven.style.display=isSelected.k&&'block'||'none';
               },
@@ -331,7 +330,7 @@
           }
           var baseId=['z','x','c'];
           function getMinValue(){
-              var allValues=[],ids=baseId;
+              var allValues=[],ids=Array.from(baseId);
               isSelected.k&&ids.push('k');//jshint ignore:line
               for(let ter of ids){
                   allValues.push(getValue(ter));
@@ -339,7 +338,7 @@
               return Math.min(...allValues);
           }
           function getCoreMinValue(){
-              var allValues=[],ids=baseId;
+              var allValues=[],ids=Array.from(baseId);
               for(let ter of ids){
                   allValues.push(getValue(ter));
               }
