@@ -1,0 +1,162 @@
+<!DocType Html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link href="https://fonts.googleapis.com/css?family=Roboto:400,500" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <script src='https://ihatetomatoes.net/demos/parallax-scroll-effect/js/skrollr.js'></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src='http://www.colegannon.com/scripts/typed.js'></script>
+        <script>String.prototype.splice||(String.prototype.splice=function(a,b,c){return this.slice(0,a)+c+this.slice(a+Math.abs(b))});</script>
+        <title>Portfoliage</title>
+        <style>
+            @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700');
+            body {
+                outline:none;
+                margin:0px;
+                font-family:'Source Sans Pro', sans-serif;
+                width:100vw;
+                overflow-x:hidden;
+                transition:all 500ms;
+            }
+            .navbar {
+                height:400px;
+                font-size:18px;
+                width:100%;
+                background-color:rgba(0,0,0,0.2);
+                position:absolute;
+                color:white;
+                vertical-align: middle;
+                display:inline-block;
+            }
+            .navbar ul {
+                padding-top:10px;
+                position:fixed;
+                text-decoration:none;
+                list-style-type: none;
+                display:inline-block
+            }
+            .navbar ul a {
+                text-decoration:none;
+                color:white;
+                z-index:2;
+                cursor:pointer;
+                display:inline-block;
+            }
+            .navbar ul li {
+                display:inline-block;
+                padding-right:10px;
+            }
+            /*hero*/
+            .hero {
+                text-align:center;
+                background: url(http://wallpapershome.com/images/pages/pic_h/10121.jpg) no-repeat fixed;
+                background-position:50% -50%;
+                background-size: cover;
+                height:400px;
+                z-index:-3;
+            }
+            .hero .title {
+                font-size:50px;
+                font-family:'Source Sans Pro';
+                font-weight:700;
+                margin: 0;
+                position: relative;
+                color:white;
+                line-height:400px;
+                height:0px;
+            }
+            .wings {
+                position: absolute;
+                width: 100%;
+                height: 20px;
+                background-color: white;
+            }
+            .wings:before, .wings:after {
+                transition:all 765ms;
+                content:'';
+                position: absolute;
+                bottom: 100%;
+                width: 50%;
+                box-sizing: border-box;
+            }
+            .wings:before {
+                right: 50%;
+                border-bottom: 30px solid white;
+                border-right: 30px solid transparent;
+            }
+            .wings:after {
+                left: 50%;
+                border-bottom: 30px solid white;
+                border-left: 30px solid transparent;
+            }
+
+            .about {
+                margin-top:20px;
+                margin-right:20px;
+                margin-left:20px;
+                margin-bottom:40px;
+                padding:0px 10px;
+                background:white;
+                position:relative;
+            }
+            .js {
+                transition:all 500ms;
+                cursor:pointer;
+            }
+            .js:hover {
+                color:purple;
+            }
+            .dtech {
+                background-color:333333;
+                text-align:center;
+                color:white;
+            }
+            .dtech p {
+                text-align:left;
+                padding:5px;
+                float:;
+            }
+            a{
+                color:#03A9F4;
+                text-decoration: none;
+                title
+            }
+        </style>
+    <body>
+        <header class='navbar' data-top='background-color:rgba(0,0,0,0.2);' data-350='background-color:rgba(0,0,0,0.7);'>
+            <ul data-0='top:0px; display:block;' data-100='opacity:1;' data-170='opacity:0;display:none'>
+                <li><a href='//github.com/j1ng3r'>Github</a></li>
+                <li><a href="//code.colegannon.com/dogrolld">My Projects</a></li>
+                <li><a href="//github.com/Coalpha/code.colegannon/tree/master/HTMPS">HTMPS</a></li>
+            </ul>
+        </header>
+        <div class='hero' data-0='background-position:center -40px;' data-400='background-position:center 0px;'>
+            <div class='title'>Marcus Luebke</div>
+        </div>
+        <div class='wings'>
+        </div>
+        <div class='about'>
+            <p>Hi, my name is Marcus Luebke. I am an independent programmer of games, and useful applications. I also makedumb things that are probably a <span style='cursor:pointer' onclick="waste_time()">waste of<span title="Ayyyyyyyyyyyyyyyy"> </span>time</span> but are super amusing and expand my knowledge of programming. I enjoy scientific research, mathematics, and politics.</p>
+            <p>You can check out my <a href="//www.google.com" title="Let's a go!">Design Lab Projects</a></p>
+        </div>
+        <div class='dtech'>
+            <p>Design Tech High School is a charter school supported by Oracle. At Design Tech, we learn about design thinking</p>
+        </div>
+        
+        <script>
+            
+            var s = skrollr.init();
+            var jsactive=false;
+            function waste_time(){
+                if(waste_time.a++==30){
+                    $('.title')[0].innerHTML="Stop looking for Easter eggs and look at the portfolio."; 
+                }
+                
+            }
+            waste_time.a=0;
+            function doajavascript(){jsactive||(jsactive=!0,$(".js")[0].typing=!0,$(function(){$(".js").typed({strings:["cool stuff.^1700","interesting things.^1700","obfuscation.^1700","snas.","javascript."]})}))};
+        </script>
+
+    </body>
+</html>
